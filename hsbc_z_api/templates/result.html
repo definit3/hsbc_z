@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+
+
+<div class="wrapper"><ul class="mat_list card scrollable">
+  <h2>You have been classified in {{ risk }} Risk </h2>
+   <h3>The following Investment Schemes are suggested for you</h3>
+   
+
+   {% if risk == 'High' %}
+      <h4><a>Stocks</a></h4>
+
+    {% endif %}
+
+    <h4>Mutual Funds</h4>
+  </ul>
+  {% for i in my_dict %}
+<!--       <div class="mat_list_title">
+       
+      </div> -->
+
+      <li><a>{{i}}</a></li>
+    
+    {% endfor %}
+    </ul>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}

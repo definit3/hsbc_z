@@ -52,11 +52,11 @@ mutual_funds_details['HDFC Small Cap Fund']=['long','Investment predominantly in
 mutual_funds_details['ICICI Prudential US Bluechip Equity Fund']=['long','An open ended equity scheme primarily investing in equity and equity related securities of companies listed on recognized stock exchanges in the United States of America']
 mutual_funds_details['Invesco India Global Equity Income Fund']=['long','Investment in units of Invesco Global Equity Income Fund, an overseas equity fund']
 
-risk_list['low']=['Aditya Birla Sun Life Overnight Fund','HSBC Overnight Fund','HSBC Cash Fund','HSBC Liquid Fund','HSBC Overnight Fund','ICICI Prudential Liquid Fund']
-risk_list['moderately low']=['Aditya Birla Sun Life Savings Fund','HDFC Arbitrage Fund','HDFC Ultra Short Term Fund','HSBC Short Duration Fund','HDFC Short Term Debt Fund','ICICI Prudential Savings Fund','HSBC Ultra Short Duration Fund','Kotak Bond Short Term Fund']
-risk_list['medium']=['HDFC Income Fund','HSBC Corporate Bond Fund','HSBC Flexi Debt Fund','ICICI Prudential Credit Risk Fund','IDFC Dynamic Bond Fund','L&T Triple Ace Bond Fund','ICICI Prudential Corporate Bond Fund','IDFC Corporate Bond Fund','HDFC Credit Risk Fund','Kotak Low Duration Fund']
-risk_list['moderately high']=['Aditya Birla Sun Life MNC Fund','Axis Bluechip Fund','DSP Top 100 Equity Fund','Franklin India Prima Fund','HSBC Focused Equity Fund','HDFC Gold Fund','HSBC Multi Cap Equity Fund','HSBC Regular Savings Fund','ICICI Prudential Bluechip Fund','Kotak Standard Multicap Fund','DSP Midcap Fund','UTI Mid Cap']
-risk_list['high']=['Aditya Birla Sun Life India GenNext Fund','DSP Global Allocation Fund','Franklin India Smaller Companies Fund','HDFC Equity Fund','HSBC Infrastructure Equity Fund','HDFC Small Cap Fund','ICICI Prudential US Bluechip Equity Fund','Invesco India Global Equity Income Fund']
+risk_list['Low']=['Aditya Birla Sun Life Overnight Fund','HSBC Overnight Fund','HSBC Cash Fund','HSBC Liquid Fund','HSBC Overnight Fund','ICICI Prudential Liquid Fund']
+risk_list['Moderately Low']=['Aditya Birla Sun Life Savings Fund','HDFC Arbitrage Fund','HDFC Ultra Short Term Fund','HSBC Short Duration Fund','HDFC Short Term Debt Fund','ICICI Prudential Savings Fund','HSBC Ultra Short Duration Fund','Kotak Bond Short Term Fund']
+risk_list['Moderate']=['HDFC Income Fund','HSBC Corporate Bond Fund','HSBC Flexi Debt Fund','ICICI Prudential Credit Risk Fund','IDFC Dynamic Bond Fund','L&T Triple Ace Bond Fund','ICICI Prudential Corporate Bond Fund','IDFC Corporate Bond Fund','HDFC Credit Risk Fund','Kotak Low Duration Fund']
+risk_list['Moderately High']=['Aditya Birla Sun Life MNC Fund','Axis Bluechip Fund','DSP Top 100 Equity Fund','Franklin India Prima Fund','HSBC Focused Equity Fund','HDFC Gold Fund','HSBC Multi Cap Equity Fund','HSBC Regular Savings Fund','ICICI Prudential Bluechip Fund','Kotak Standard Multicap Fund','DSP Midcap Fund','UTI Mid Cap']
+risk_list['High']=['Aditya Birla Sun Life India GenNext Fund','DSP Global Allocation Fund','Franklin India Smaller Companies Fund','HDFC Equity Fund','HSBC Infrastructure Equity Fund','HDFC Small Cap Fund','ICICI Prudential US Bluechip Equity Fund','Invesco India Global Equity Income Fund']
 
 #4. HDFC Liquid Fund
 #mutual_funds_details['HDFC Liquid Fund']=['short','To generate income through a portfolio comprising money market and debt instruments']
@@ -64,4 +64,4 @@ risk_list['high']=['Aditya Birla Sun Life India GenNext Fund','DSP Global Alloca
 
 #5 HDFC Overnight Fund
 
-print(risk_list['low'])
+# print(risk_list['Low'])
