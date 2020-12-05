@@ -110,4 +110,7 @@ $(document).on("click","#btn-submit", function(e){
             $("#preloader-profile-identification").hide();
         }
     });
+
+    document.getElementById("btn-proceed").style.display = "inline";
+    document.getElementById("btn-submit").style.display = "none";
 });
