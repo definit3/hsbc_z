@@ -20,23 +20,7 @@
 </head>
 <body>
 
-  {% csrf_token %}  
-
-  <div class="navbar-fixed">
-    <nav class="blue darken-2" role="navigation">
-      <div class="nav-wrapper container">
-      <a id="brand_logo" href="#!" class="brand-logo">Face Recognition</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
-              <a href = "/home/create-profile" class="blue darken-2" style="color: white;" target="_blank">Create Profile</a>
-          </li>
-          <li>
-              <a href = "/home/face-detection" class="blue darken-2" style="color: white;" target="_blank">Face Detection</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+  {% csrf_token %} 
 
 
   {% block content %}
