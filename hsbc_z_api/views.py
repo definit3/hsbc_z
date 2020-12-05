@@ -37,6 +37,7 @@ class GetFirstAPI(APIView):
         response = {}
         response['status'] = 500
         try:
+            response['status']=100
             response['risk'] = 'high'
         except Exception as e:
             e_type, e_object, e_tb = sys.exc_info()
