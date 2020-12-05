@@ -89,32 +89,25 @@ function getCsrfToken() {
 
 
 $(document).on("click","#btn-submit", function(e){
-    if($('#a_option').is(':checked')) { alert("it's checked"); console.log("checked")}
-    alert($(".container input[type='radio']:checked").val());
-    console.log("fuck")
-    // CSRF_TOKEN = getCsrfToken();
-    // $.ajax({
-    //     url: "http://35.232.80.150:9595/api",
-    //     type: "GET",
-    //     headers:{
-    //         "X-CSRFToken": CSRF_TOKEN
-    //     },
-    //     data: {
-    //     },
-    //     success: function(response) {
-    //         console.log(response);
-    //         if(response["status"]!=200 && response["status"]!=100){
-    //             console.log("Please report this error: "+ response["status_message"]);
-    //             // $("#modal1").modal('open');
-    //             // clearScreenShotTimer();
-    //         }
-    //         else if(response["status"]==100)
-    //         {
-    //         }
-    //     },
-    //     error: function(xhr, textstatus, errorthrown) {
-    //         console.log("Please report this error: " + errorthrown + xhr.status + xhr.responseText);
-    //         $("#preloader-profile-identification").hide();
-    //     }
-    // });
+    $(".container input[type='radio']:checked").val();
+
+    CSRF_TOKEN = getCsrfToken();
+    $.ajax({
+        url: "http://35.232.80.150:9595/api/get_risk",
+        // url: "http://127.0.0.1:8000/api/get_risk",
+        type: "POST",
+        headers:{
+            "X-CSRFToken": CSRF_TOKEN
+        },
+        data: {
+            "risk":$(".container input[type='radio']:checked").val()
+        },
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(xhr, textstatus, errorthrown) {
+            console.log("Please report this error: " + errorthrown + xhr.status + xhr.responseText);
+            $("#preloader-profile-identification").hide();
+        }
+    });
 });
