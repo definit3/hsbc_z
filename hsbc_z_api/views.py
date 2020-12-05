@@ -5,6 +5,15 @@ from rest_framework.authentication import SessionAuthentication, BasicAuthentica
 from rest_framework.permissions import IsAuthenticated
 import json
 
+
+
+def risk_assess(request):
+    if request.method=='GET':
+        return render(request, 'risk_assess.html')
+
+
+
+#APIs HERE
 # Create your views here.
 class CsrfExemptSessionAuthentication(SessionAuthentication):
 
@@ -17,12 +26,12 @@ class GetFirstAPI(APIView):
         response = {}
         response['status'] = 500
         try:
-            response['status'] = 200
+            response['risk'] = 'high'
         except Exception as e:
             e_type, e_object, e_tb = sys.exc_info()
         return Response(data=response)
 
-
+#risk : low, moderately_low, moderate, moderately_high, high
 class GetRecommendationAPI(APIView):
 
     def post(self, request, *args, **kwargs):
@@ -33,7 +42,7 @@ class GetRecommendationAPI(APIView):
             age = data['age']
             risk = data['risk']
             capital=data['capital']
-            maturity=data['maturity']
+            time=data['time']
 
             response['status'] = 200
             response['data']=age+risk+capital+maturity
