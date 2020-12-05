@@ -89,10 +89,10 @@ function getCsrfToken() {
 
 
 $(document).on("click","#btn-submit", function(e){
-
+    if($('#e_option').is(':checked')) { alert("it's checked"); }
     CSRF_TOKEN = getCsrfToken();
     $.ajax({
-        url: "http://35.232.80.150:9595/api",
+        url: "https://35.232.80.150:9595/api",
         type: "GET",
         headers:{
             "X-CSRFToken": CSRF_TOKEN
