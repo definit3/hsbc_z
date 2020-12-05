@@ -93,8 +93,8 @@ $(document).on("click","#btn-submit", function(e){
 
     CSRF_TOKEN = getCsrfToken();
     $.ajax({
-        // url: "http://35.232.80.150:9595/api/get_risk",
-        url: "http://127.0.0.1:8000/api/get_risk",
+        url: "http://35.232.80.150:9595/api/get_risk",
+        // url: "http://127.0.0.1:8000/api/get_risk",
         type: "POST",
         headers:{
             "X-CSRFToken": CSRF_TOKEN
