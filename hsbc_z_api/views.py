@@ -14,6 +14,7 @@ def risk_assess(request):
     return render(request, 'risk_assess.html')
 
 def show_recommendations(request):
+    global client_risk
     my_list=recommendation_list.risk_list[client_risk]
     print(my_list)
     return render(request, 'result.html',{'my_dict':my_list,'risk':client_risk})
