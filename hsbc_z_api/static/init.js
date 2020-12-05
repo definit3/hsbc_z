@@ -111,6 +111,6 @@ $(document).on("click","#btn-submit", function(e){
         }
     });
 
-    document.getElementById("btn-proceed").style.display = "inline";
-    document.getElementById("btn-submit").style.display = "none";
+    // document.getElementById("btn-proceed").style.display = "inline";
+    // document.getElementById("btn-submit").style.display = "none";
 });

@@ -13,6 +13,10 @@ client_risk="High"
 def risk_assess(request):
     return render(request, 'risk_assess.html')
 
+def risk_result(request):
+    global client_risk
+    return render(request, 'risk_result.html',{'risk':client_risk})
+
 def show_recommendations(request):
     global client_risk
     my_list=recommendation_list.risk_list[client_risk]

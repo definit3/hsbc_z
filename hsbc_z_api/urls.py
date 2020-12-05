@@ -8,5 +8,6 @@ urlpatterns = [
     path('', views.GetFirst, name='GetFirst'),
     path('get_recommendation', views.GetRecommendation, name='GetRecommendation'),
     path('risk',views.risk_assess, name='risk_assess'),
-    path('result',views.show_recommendations,name='result')
+    path('result',views.show_recommendations,name='result'),
+    path('risk_result',views.risk_result,name='risk_result')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
