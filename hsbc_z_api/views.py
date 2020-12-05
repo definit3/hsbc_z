@@ -7,7 +7,7 @@ import json
 import sys
 from hsbc_z_api import recommendation_list
 
-client_risk="Moderate"
+client_risk="High"
 
 
 def risk_assess(request):
