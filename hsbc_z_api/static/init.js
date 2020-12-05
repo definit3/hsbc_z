@@ -89,30 +89,32 @@ function getCsrfToken() {
 
 
 $(document).on("click","#btn-submit", function(e){
-    if($('#e_option').is(':checked')) { alert("it's checked"); }
-    CSRF_TOKEN = getCsrfToken();
-    $.ajax({
-        url: "http://35.232.80.150:9595/api",
-        type: "GET",
-        headers:{
-            "X-CSRFToken": CSRF_TOKEN
-        },
-        data: {
-        },
-        success: function(response) {
-            console.log(response);
-            if(response["status"]!=200 && response["status"]!=100){
-                console.log("Please report this error: "+ response["status_message"]);
-                // $("#modal1").modal('open');
-                // clearScreenShotTimer();
-            }
-            else if(response["status"]==100)
-            {
-            }
-        },
-        error: function(xhr, textstatus, errorthrown) {
-            console.log("Please report this error: " + errorthrown + xhr.status + xhr.responseText);
-            $("#preloader-profile-identification").hide();
-        }
-    });
+    if($('#a_option').is(':checked')) { alert("it's checked"); console.log("checked")}
+    alert($(".container input[type='radio']:checked").val());
+    console.log("fuck")
+    // CSRF_TOKEN = getCsrfToken();
+    // $.ajax({
+    //     url: "http://35.232.80.150:9595/api",
+    //     type: "GET",
+    //     headers:{
+    //         "X-CSRFToken": CSRF_TOKEN
+    //     },
+    //     data: {
+    //     },
+    //     success: function(response) {
+    //         console.log(response);
+    //         if(response["status"]!=200 && response["status"]!=100){
+    //             console.log("Please report this error: "+ response["status_message"]);
+    //             // $("#modal1").modal('open');
+    //             // clearScreenShotTimer();
+    //         }
+    //         else if(response["status"]==100)
+    //         {
+    //         }
+    //     },
+    //     error: function(xhr, textstatus, errorthrown) {
+    //         console.log("Please report this error: " + errorthrown + xhr.status + xhr.responseText);
+    //         $("#preloader-profile-identification").hide();
+    //     }
+    // });
 });
