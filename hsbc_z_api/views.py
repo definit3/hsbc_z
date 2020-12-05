@@ -11,7 +11,18 @@ def risk_assess(request):
     if request.method=='GET':
         return render(request, 'risk_assess.html')
 
-
+# def cityView(request):
+#     if request.method=='GET':
+#         cityForm = city()
+#         parks=park.objects.all()
+#         return render(request, 'city.html',{'park':parks,'city':cityForm})
+#     else:
+#         cityForm = city(request.POST)
+#         if cityForm.is_valid():
+#             cd=cityForm.cleaned_data
+#             cities=cd['city']
+#             parks=park.objects.filter(city__iexact=cities)
+#             return render(request,'park2.html',{'park':parks})
 
 #APIs HERE
 # Create your views here.

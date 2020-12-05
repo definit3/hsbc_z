@@ -1,27 +1,57 @@
-<html>
+{% load static %}
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title class="site-title">Face Recognition</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <style type="text/css">
-        @import url(https://fonts.googleapis.com/css?family=Inconsolata:700);
-        body 
-        {
-            font-family: 'Inconsolata', sans-serif;
-            font-style: normal;
-            font-weight: 200;
-            margin: 0px;
-            <!--background: #310404 url(https://cdn.hipwallpaper.com/i/11/4/oQHCrX.jpg)-->
-            background: white
-        }
-    </style>
+  <link href="{% static 'materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="{% static 'style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="{% static 'jquery.dataTables.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <link href="{% static 'profile.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'risk_assess.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <script src="{% static 'Chart.min.js' %}"></script>
+
 </head>
-
 <body>
 
-{% block content %}
-{% endblock content %}
+  {% csrf_token %}  
 
+  <div class="navbar-fixed">
+    <nav class="blue darken-2" role="navigation">
+      <div class="nav-wrapper container">
+      <a id="brand_logo" href="#!" class="brand-logo">Face Recognition</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+              <a href = "/home/create-profile" class="blue darken-2" style="color: white;" target="_blank">Create Profile</a>
+          </li>
+          <li>
+              <a href = "/home/face-detection" class="blue darken-2" style="color: white;" target="_blank">Face Detection</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  {% block content %}
+  {% endblock %}
+
+
+  <script type="text/javascript" src="{% static 'jquery.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'RecordRTC.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'adapter-latest.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'materialize.js' %}"></script>
+  
+  <script type="text/javascript" src="{% static 'init.js' %}"></script>
+  
 </body>
-
 </html>
